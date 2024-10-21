@@ -11,6 +11,9 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Old-Main" Type="Folder">
+			<Item Name="FROG_smaract_program_with_calibration.vi" Type="VI" URL="../FROG_smaract_program_with_calibration.vi"/>
+		</Item>
 		<Item Name="UI SmarAct.lvclass" Type="LVClass" URL="../Workers/UI SmarAct/UI SmarAct.lvclass"/>
 		<Item Name="Dépendances" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
@@ -24,6 +27,11 @@
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
 				<Item Name="Check Special Tags.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Check Special Tags.vi"/>
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
+				<Item Name="Close File+.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Close File+.vi"/>
+				<Item Name="compatCalcOffset.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatCalcOffset.vi"/>
+				<Item Name="compatFileDialog.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatFileDialog.vi"/>
+				<Item Name="compatOpenFileOperation.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatOpenFileOperation.vi"/>
+				<Item Name="compatWriteText.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatWriteText.vi"/>
 				<Item Name="Convert property node font to graphics font.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Convert property node font to graphics font.vi"/>
 				<Item Name="Create Directory Recursive.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Create Directory Recursive.vi"/>
 				<Item Name="Debug Client.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_Workers/Debugger/Debug Client/Debug Client.lvlib"/>
@@ -34,6 +42,7 @@
 				<Item Name="Error Code Database.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Code Database.vi"/>
 				<Item Name="ErrWarn.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/ErrWarn.ctl"/>
 				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
+				<Item Name="Find First Error.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find First Error.vi"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
 				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
 				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
@@ -56,6 +65,7 @@
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
 				<Item Name="Num to Bold Hex Str.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/ProbeSupport.llb/Num to Bold Hex Str.vi"/>
+				<Item Name="Open_Create_Replace File.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/Open_Create_Replace File.vi"/>
 				<Item Name="Qualified Name Array To Single String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Qualified Name Array To Single String.vi"/>
 				<Item Name="Refnum in Hex str.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/ProbeSupport.llb/Refnum in Hex str.vi"/>
 				<Item Name="Refnum Num Not A Refnum Str.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/ProbeSupport.llb/Refnum Num Not A Refnum Str.vi"/>
@@ -67,6 +77,7 @@
 				<Item Name="SA_GetStatus_S.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Synchronous/SA_GetStatus_S.vi"/>
 				<Item Name="SA_GetSystemLocator.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Initialization/SA_GetSystemLocator.vi"/>
 				<Item Name="SA_GotoPositionAbsolute_S.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Synchronous/SA_GotoPositionAbsolute_S.vi"/>
+				<Item Name="SA_GotoPositionRelative_S.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Synchronous/SA_GotoPositionRelative_S.vi"/>
 				<Item Name="SA_OpenSystem.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Initialization/SA_OpenSystem.vi"/>
 				<Item Name="SA_ReleaseSystems.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Initialization/SA_ReleaseSystems.vi"/>
 				<Item Name="SA_SetClosedLoopMaxFrequency_S.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Synchronous/SA_SetClosedLoopMaxFrequency_S.vi"/>
@@ -91,8 +102,22 @@
 				<Item Name="VI Scripting - Traverse.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/traverseref.llb/VI Scripting - Traverse.lvlib"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				<Item Name="Workers.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/_Workers/Library/Workers.lvlib"/>
+				<Item Name="Write File+ (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write File+ (string).vi"/>
+			</Item>
+			<Item Name="common32.dll" Type="Document" URL="common32.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="MCSControl.dll" Type="Document" URL="../../../../../SmarAct/MCS/SDK/lib/MCSControl.dll"/>
+			<Item Name="OmniDriver32.dll" Type="Document" URL="OmniDriver32.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Wrapper_closeAllSpectrometers.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_closeAllSpectrometers.vi"/>
+			<Item Name="Wrapper_Create.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_Create.vi"/>
+			<Item Name="Wrapper_Destroy.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_Destroy.vi"/>
+			<Item Name="Wrapper_getSpectrum.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_getSpectrum.vi"/>
+			<Item Name="Wrapper_getWavelengths.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_getWavelengths.vi"/>
+			<Item Name="Wrapper_openAllSpectrometers.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_openAllSpectrometers.vi"/>
+			<Item Name="Wrapper_setIntegrationTime.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_setIntegrationTime.vi"/>
 		</Item>
 		<Item Name="Spécifications de construction" Type="Build"/>
 	</Item>
