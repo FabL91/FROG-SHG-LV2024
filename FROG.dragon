@@ -1,3 +1,11 @@
 [project]
 labview-version = 2024
 vipc = ""
+
+[nipm]
+
+[vipm]
+
+[vipm.dependencies]
+lv_toml = "2.3.2.24"
+sc_workers_framework_core = "5.0.0.14"
