@@ -12,6 +12,7 @@
 
 # ignore all files in any directory named build
 build/
+Construction/
 
 # ignore doc/notes.txt, but not doc/server/arch.txt
 *.txt
