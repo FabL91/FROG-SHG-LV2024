@@ -21,6 +21,7 @@
 			<Item Name="Wrapper_getName_Mod.vi" Type="VI" URL="../Wrapper_getName_Mod.vi"/>
 			<Item Name="Wrapper_getSerialNumber_Mod.vi" Type="VI" URL="../Wrapper_getSerialNumber_Mod.vi"/>
 			<Item Name="Wrapper_openAllSpectrometers_Mod.vi" Type="VI" URL="../Wrapper_openAllSpectrometers_Mod.vi"/>
+			<Item Name="Wrapper_setIntegrationTime_Mod.vi" Type="VI" URL="../Wrapper_setIntegrationTime_Mod.vi"/>
 		</Item>
 		<Item Name="Package Dependencies" Type="IIO Ladder Diagram">
 			<Property Name="NI.SortType" Type="Int">0</Property>
@@ -103,6 +104,7 @@
 				<Item Name="SA_SetClosedLoopMoveSpeed_S.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Synchronous/SA_SetClosedLoopMoveSpeed_S.vi"/>
 				<Item Name="SA_SetPosition_S.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Synchronous/SA_SetPosition_S.vi"/>
 				<Item Name="SA_SetSensorEnabled_S.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Synchronous/SA_SetSensorEnabled_S.vi"/>
+				<Item Name="SA_Stop_S.vi" Type="VI" URL="/&lt;vilib&gt;/SmarAct/MCS/Synchronous/SA_Stop_S.vi"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
 				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
@@ -125,7 +127,6 @@
 			<Item Name="common32.dll" Type="Document" URL="common32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="MCSControl.dll" Type="Document" URL="../../../../../SmarAct/MCS/SDK/lib/MCSControl.dll"/>
 			<Item Name="OmniDriver32.dll" Type="Document" URL="OmniDriver32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -156,7 +157,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{CB78AED5-EC50-4490-98AE-2FC41ACDA9B8}</Property>
-				<Property Name="Bld_version.build" Type="Int">4</Property>
+				<Property Name="Bld_version.build" Type="Int">8</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">FROG-LV.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../Construction/FROG-LV.exe</Property>
@@ -167,7 +168,7 @@
 				<Property Name="Destination[1].path" Type="Path">../Construction/data</Property>
 				<Property Name="Destination[1].path.type" Type="Str">relativeToProject</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{A4BB51CD-81B2-4D49-8B48-39D74990B6AB}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{8CC59BCA-9AF7-4F90-AB9C-7D76F1F773EB}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/Poste de travail/UI SmarAct.lvclass/Main.vi</Property>
@@ -178,7 +179,28 @@
 				<Property Name="Source[1].propertiesCount" Type="Int">2</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">2</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/Poste de travail/Spectro Ocean Optics/Wrapper_closeAllSpectrometers_Mod.vi</Property>
+				<Property Name="Source[2].type" Type="Str">VI</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/Poste de travail/Spectro Ocean Optics/Wrapper_Create_Mod.vi</Property>
+				<Property Name="Source[3].type" Type="Str">VI</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/Poste de travail/Spectro Ocean Optics/Wrapper_Destroy_Mod.vi</Property>
+				<Property Name="Source[4].type" Type="Str">VI</Property>
+				<Property Name="Source[5].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[5].itemID" Type="Ref">/Poste de travail/Spectro Ocean Optics/Wrapper_getName_Mod.vi</Property>
+				<Property Name="Source[5].type" Type="Str">VI</Property>
+				<Property Name="Source[6].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[6].itemID" Type="Ref">/Poste de travail/Spectro Ocean Optics/Wrapper_getSerialNumber_Mod.vi</Property>
+				<Property Name="Source[6].type" Type="Str">VI</Property>
+				<Property Name="Source[7].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[7].itemID" Type="Ref">/Poste de travail/Spectro Ocean Optics/Wrapper_openAllSpectrometers_Mod.vi</Property>
+				<Property Name="Source[7].type" Type="Str">VI</Property>
+				<Property Name="Source[8].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[8].itemID" Type="Ref">/Poste de travail/Spectro Ocean Optics/Wrapper_setIntegrationTime_Mod.vi</Property>
+				<Property Name="Source[8].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">9</Property>
 				<Property Name="TgtF_enableDebugging" Type="Bool">true</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">FROG</Property>
 				<Property Name="TgtF_internalName" Type="Str">FROG</Property>
