@@ -63,7 +63,7 @@ if file_content[2][0:15] == 'Delay increment':
     DelayPoints_increment = float(file_content[2].split(' ')[-1].replace(',','.'))
 else:
     print('Error file not formated as expected')
-   
+
 Wavelength_original = np.array([float(number.replace(',','.')) for number in file_content[4].split('\t')])  
 data = np.array([float(number.replace(',','.')) for number in file_content[6].split('\t')])
 
@@ -97,6 +97,7 @@ Header = str(DelayPoints_number) + ' ' + str(WavelengthPoints_number) + ' ' + st
 
 # data
 np.savetxt(filepath_output, data_new, delimiter='\t', header=Header, comments='')
+
 
 #%% clean up
 
