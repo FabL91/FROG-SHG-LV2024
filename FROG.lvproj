@@ -42,6 +42,7 @@
 		<Item Name="Spectro Acquisition.lvclass" Type="LVClass" URL="../Workers/Spectro Acquisition/Spectro Acquisition.lvclass"/>
 		<Item Name="test Image.vi" Type="VI" URL="../test Image.vi"/>
 		<Item Name="test boucle For.vi" Type="VI" URL="../test boucle For.vi"/>
+		<Item Name="test conversion fichier.vi" Type="VI" URL="../test conversion fichier.vi"/>
 		<Item Name="Dépendances" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="LV-TOML.lvlib" Type="Library" URL="/&lt;userlib&gt;/LV-TOML/lib/LV-TOML.lvlib"/>
