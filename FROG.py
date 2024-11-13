@@ -31,7 +31,8 @@ Should be able to read files with comas as a decimal separator
 import numpy as np
 import tkinter as tk
 import os as os
-from scipy import interpolate
+#from scipy import interpolate
+from scipy.interpolate import interp2d, RectBivariateSpline
 from tkinter import filedialog
 
 #%%
@@ -67,6 +68,8 @@ else:
 Wavelength_original = np.array([float(number.replace(',','.')) for number in file_content[4].split('\t')])  
 data = np.array([float(number.replace(',','.')) for number in file_content[6].split('\t')])
 
+print(DelayPoints_number, WavelengthPoints_number, DelayPoints_increment, Wavelength_original, data)
+
 del file_content
 #%% formating data
 
@@ -83,7 +86,7 @@ WavelengthPoints_increment = np.mean(np.diff(Wavelength_original))
 WavelengthPoints_center = Wavelength_new[int(WavelengthPoints_number / 2)]
 
 # grid data & interpolate for the new axis
-interpol_function = interpolate.interp2d(DelayVector, Wavelength_original, data, kind='cubic')
+interpol_function = interp2d(DelayVector, Wavelength_original, data, kind='cubic')
 data_new = interpol_function(DelayVector, Wavelength_new)
 
 #%% saving into new file

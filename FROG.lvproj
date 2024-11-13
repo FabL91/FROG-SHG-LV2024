@@ -41,6 +41,7 @@
 		<Item Name="UI SmarAct.lvclass" Type="LVClass" URL="../Workers/UI SmarAct/UI SmarAct.lvclass"/>
 		<Item Name="Spectro Acquisition.lvclass" Type="LVClass" URL="../Workers/Spectro Acquisition/Spectro Acquisition.lvclass"/>
 		<Item Name="test Image.vi" Type="VI" URL="../test Image.vi"/>
+		<Item Name="test boucle For.vi" Type="VI" URL="../test boucle For.vi"/>
 		<Item Name="Dépendances" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="LV-TOML.lvlib" Type="Library" URL="/&lt;userlib&gt;/LV-TOML/lib/LV-TOML.lvlib"/>
@@ -164,7 +165,7 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{CB78AED5-EC50-4490-98AE-2FC41ACDA9B8}</Property>
-				<Property Name="Bld_version.build" Type="Int">10</Property>
+				<Property Name="Bld_version.build" Type="Int">11</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">FROG-LV.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../Construction/FROG-LV.exe</Property>
