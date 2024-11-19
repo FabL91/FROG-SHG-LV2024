@@ -67,8 +67,9 @@ else:
 
 Wavelength_original = np.array([float(number.replace(',','.')) for number in file_content[4].split('\t')])  
 data = np.array([float(number.replace(',','.')) for number in file_content[6].split('\t')])
+# Enregistrement dans un fichier texte
 
-print(DelayPoints_number, WavelengthPoints_number, DelayPoints_increment, Wavelength_original, data)
+
 
 del file_content
 #%% formating data
@@ -81,9 +82,12 @@ data = data.reshape((WavelengthPoints_number, DelayPoints_number))
 DelayVector = np.linspace(-DelayPoints_number * (DelayPoints_increment / 2), DelayPoints_number * (DelayPoints_increment / 2), DelayPoints_number)
 Wavelength_new = np.linspace(Wavelength_original[0], Wavelength_original[-1], WavelengthPoints_number)
 
+
+
 # calculating header values
 WavelengthPoints_increment = np.mean(np.diff(Wavelength_original))
 WavelengthPoints_center = Wavelength_new[int(WavelengthPoints_number / 2)]
+
 
 # grid data & interpolate for the new axis
 interpol_function = interp2d(DelayVector, Wavelength_original, data, kind='cubic')
