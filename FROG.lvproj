@@ -29,6 +29,9 @@
 		<Item Name="Icone" Type="Folder">
 			<Item Name="Frog.ico" Type="Document" URL="../Icone/Frog.ico"/>
 		</Item>
+		<Item Name="Documents" Type="Folder">
+			<Item Name="Rampe Par échantillon.PNG" Type="Document" URL="../Documents/Rampe Par échantillon.PNG"/>
+		</Item>
 		<Item Name="Package Dependencies" Type="IIO Ladder Diagram">
 			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Property Name="ShowPackages" Type="Bool">true</Property>
@@ -43,6 +46,7 @@
 		</Item>
 		<Item Name="UI SmarAct.lvclass" Type="LVClass" URL="../Workers/UI SmarAct/UI SmarAct.lvclass"/>
 		<Item Name="Spectro Acquisition.lvclass" Type="LVClass" URL="../Workers/Spectro Acquisition/Spectro Acquisition.lvclass"/>
+		<Item Name="File manipulate.lvclass" Type="LVClass" URL="../Workers/File manipulate/File manipulate.lvclass"/>
 		<Item Name="test Image.vi" Type="VI" URL="../test Image.vi"/>
 		<Item Name="test boucle For.vi" Type="VI" URL="../test boucle For.vi"/>
 		<Item Name="test conversion fichier.vi" Type="VI" URL="../test conversion fichier.vi"/>
