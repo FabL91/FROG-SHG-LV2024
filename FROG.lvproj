@@ -49,7 +49,6 @@
 		<Item Name="File manipulate.lvclass" Type="LVClass" URL="../Workers/File manipulate/File manipulate.lvclass"/>
 		<Item Name="test Image.vi" Type="VI" URL="../test Image.vi"/>
 		<Item Name="test boucle For.vi" Type="VI" URL="../test boucle For.vi"/>
-		<Item Name="test conversion fichier.vi" Type="VI" URL="../test conversion fichier.vi"/>
 		<Item Name="Dépendances" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="LV-TOML.lvlib" Type="Library" URL="/&lt;userlib&gt;/LV-TOML/lib/LV-TOML.lvlib"/>
@@ -58,6 +57,69 @@
 				<Item Name="Enum - Rows Columns.ctl" Type="VI" URL="/&lt;userlib&gt;/_Hooovahh/Array VIMs/Controls/Enum - Rows Columns.ctl"/>
 				<Item Name="Convert 2D Array to 1D Array-VIM.vim" Type="VI" URL="/&lt;userlib&gt;/_Hooovahh/Array VIMs/Convert 2D Array to 1D Array-VIM.vim"/>
 				<Item Name="Convert 1D Array to 2D Array-VIM.vim" Type="VI" URL="/&lt;userlib&gt;/_Hooovahh/Array VIMs/Convert 1D Array to 2D Array-VIM.vim"/>
+				<Item Name="Gaussian pulse.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lasers.llb/Gaussian pulse.vi"/>
+				<Item Name="pulse cluster.ctl" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/pulse cluster.ctl"/>
+				<Item Name="donk.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/donk.vi"/>
+				<Item Name="frequency vector.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/frequency vector.vi"/>
+				<Item Name="create generic vector.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/create generic vector.vi"/>
+				<Item Name="ideal shaper.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements.llb/ideal shaper.vi"/>
+				<Item Name="sh_Taylor.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements lowlevel.llb/sh_Taylor.vi"/>
+				<Item Name="sh_sinusoidal.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements lowlevel.llb/sh_sinusoidal.vi"/>
+				<Item Name="sh_square.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements lowlevel.llb/sh_square.vi"/>
+				<Item Name="sh_sawtooth.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements lowlevel.llb/sh_sawtooth.vi"/>
+				<Item Name="sh_amplitude phase.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements lowlevel.llb/sh_amplitude phase.vi"/>
+				<Item Name="prop amplitude.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/prop amplitude.vi"/>
+				<Item Name="prop linear phase.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/prop linear phase.vi"/>
+				<Item Name="transparent nonlinear medium.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/nonlinear elements.llb/transparent nonlinear medium.vi"/>
+				<Item Name="nl_guess.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/nonlinear elements lowlevel.llb/nl_guess.vi"/>
+				<Item Name="transparent dispersive element.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements.llb/transparent dispersive element.vi"/>
+				<Item Name="lm_phase.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements lowlevel.llb/lm_phase.vi"/>
+				<Item Name="wavelength vector.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/wavelength vector.vi"/>
+				<Item Name="refractive index load.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/refractive index load.vi"/>
+				<Item Name="file2path.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/file2path.vi"/>
+				<Item Name="refractive index coerce.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/refractive index coerce.vi"/>
+				<Item Name="strip linear phase.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/strip linear phase.vi"/>
+				<Item Name="extract non zero region.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/extract non zero region.vi"/>
+				<Item Name="prop t0.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/prop t0.vi"/>
+				<Item Name="chi3 load.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/chi3 load.vi"/>
+				<Item Name="adjust temporal samples automatic.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/adjust temporal samples automatic.vi"/>
+				<Item Name="shift ifft.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/shift ifft.vi"/>
+				<Item Name="adjust temporal samples.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/adjust temporal samples.vi"/>
+				<Item Name="frequency step.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/frequency step.vi"/>
+				<Item Name="field interpolate relative.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/field interpolate relative.vi"/>
+				<Item Name="unwrapp phase.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/unwrapp phase.vi"/>
+				<Item Name="frequency in vector.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/frequency in vector.vi"/>
+				<Item Name="frequency field.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/frequency field.vi"/>
+				<Item Name="frequency width.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/frequency width.vi"/>
+				<Item Name="time field with units.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/time field with units.vi"/>
+				<Item Name="time field.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/time field.vi"/>
+				<Item Name="time vector.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/time vector.vi"/>
+				<Item Name="create norm and sum.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/create norm and sum.vi"/>
+				<Item Name="time step.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/time step.vi"/>
+				<Item Name="time width.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/time width.vi"/>
+				<Item Name="create closest n.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/create closest n.vi"/>
+				<Item Name="nl_phase.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/nonlinear elements lowlevel.llb/nl_phase.vi"/>
+				<Item Name="nl_dz.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/nonlinear elements lowlevel.llb/nl_dz.vi"/>
+				<Item Name="prop nonlinear phase.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/prop nonlinear phase.vi"/>
+				<Item Name="shift fft.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/shift fft.vi"/>
+				<Item Name="delay.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements.llb/delay.vi"/>
+				<Item Name="beamcombiner.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements.llb/beamcombiner.vi"/>
+				<Item Name="balance t0.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/balance t0.vi"/>
+				<Item Name="frequency equalizer.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/frequency equalizer.vi"/>
+				<Item Name="telescope.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/linear elements.llb/telescope.vi"/>
+				<Item Name="field interpolate absolute.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/field interpolate absolute.vi"/>
+				<Item Name="frequency field with t0 with units.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/frequency field with t0 with units.vi"/>
+				<Item Name="frequency field with t0.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/frequency field with t0.vi"/>
+				<Item Name="intensity.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/detectors.llb/intensity.vi"/>
+				<Item Name="field resample.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/field resample.vi"/>
+				<Item Name="FROG.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/detectors.llb/FROG.vi"/>
+				<Item Name="frog_window.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/detectors lowlevel.llb/frog_window.vi"/>
+				<Item Name="frog_save.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/detectors lowlevel.llb/frog_save.vi"/>
+				<Item Name="frog_ColorDataArray.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/detectors lowlevel.llb/frog_ColorDataArray.vi"/>
+				<Item Name="frog_InterpolateColor.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/detectors lowlevel.llb/frog_InterpolateColor.vi"/>
+				<Item Name="Save pulse to spreadsheet.VI" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/detectors.llb/Save pulse to spreadsheet.VI"/>
+				<Item Name="frequency field with units.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/lab2 lowlevel.llb/frequency field with units.vi"/>
+				<Item Name="taylor phase.vi" Type="VI" URL="/&lt;userlib&gt;/LV85/llb/detectors.llb/taylor phase.vi"/>
 			</Item>
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
@@ -148,6 +210,21 @@
 				<Item Name="NI_Gmath.lvlib" Type="Library" URL="/&lt;vilib&gt;/gmath/NI_Gmath.lvlib"/>
 				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
 				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
+				<Item Name="Flatten Pixmap(6_1).vi" Type="VI" URL="/&lt;vilib&gt;/picture/pixmap.llb/Flatten Pixmap(6_1).vi"/>
+				<Item Name="Flatten Pixmap.vi" Type="VI" URL="/&lt;vilib&gt;/picture/pixmap.llb/Flatten Pixmap.vi"/>
+				<Item Name="imagedata.ctl" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/imagedata.ctl"/>
+				<Item Name="Write JPEG File(6_1).vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Write JPEG File(6_1).vi"/>
+				<Item Name="Write JPEG File.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Write JPEG File.vi"/>
+				<Item Name="Check Data Size.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check Data Size.vi"/>
+				<Item Name="Check Color Table Size.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check Color Table Size.vi"/>
+				<Item Name="Check Path.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check Path.vi"/>
+				<Item Name="Directory of Top Level VI.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Directory of Top Level VI.vi"/>
+				<Item Name="Check File Permissions.vi" Type="VI" URL="/&lt;vilib&gt;/picture/jpeg.llb/Check File Permissions.vi"/>
+				<Item Name="Write To Spreadsheet File.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write To Spreadsheet File.vi"/>
+				<Item Name="Write To Spreadsheet File (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write To Spreadsheet File (DBL).vi"/>
+				<Item Name="Write Spreadsheet String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Spreadsheet String.vi"/>
+				<Item Name="Write To Spreadsheet File (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write To Spreadsheet File (I64).vi"/>
+				<Item Name="Write To Spreadsheet File (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write To Spreadsheet File (string).vi"/>
 			</Item>
 			<Item Name="common32.dll" Type="Document" URL="common32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>

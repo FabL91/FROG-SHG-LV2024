@@ -13,6 +13,7 @@
 # ignore all files in any directory named build Construction
 build/
 Construction/
+Documents/
 
 # ignore doc/notes.txt, but not doc/server/arch.txt
 *.txt
