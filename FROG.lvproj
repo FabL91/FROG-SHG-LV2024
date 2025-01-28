@@ -32,6 +32,9 @@
 		<Item Name="Documents" Type="Folder">
 			<Item Name="Rampe Par échantillon.PNG" Type="Document" URL="../Documents/Rampe Par échantillon.PNG"/>
 		</Item>
+		<Item Name="Newport platine" Type="Folder">
+			<Item Name="Test Platine newport.vi" Type="VI" URL="../SMC 100 driver Newport vi/Test Platine newport.vi"/>
+		</Item>
 		<Item Name="Package Dependencies" Type="IIO Ladder Diagram">
 			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Property Name="ShowPackages" Type="Bool">true</Property>
@@ -245,6 +248,12 @@
 			<Item Name="Wrapper_closeAllSpectrometers.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_closeAllSpectrometers.vi"/>
 			<Item Name="Wrapper_Destroy.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_Destroy.vi"/>
 			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
+			<Item Name="SelectInstrument.vi" Type="VI" URL="../../../../../Newport/Motion Control/SMC100/LabView/Source code/SelectInstrument.vi"/>
+			<Item Name="LWSMC100_Open.vi" Type="VI" URL="../../../../../Newport/Motion Control/SMC100/LabView/Source code/LWSMC100_Open.vi"/>
+			<Item Name="Newport.SMC100.CommandInterface" Type="Document" URL="Newport.SMC100.CommandInterface">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="LWSMC100_Close.vi" Type="VI" URL="../../../../../Newport/Motion Control/SMC100/LabView/Source code/LWSMC100_Close.vi"/>
 		</Item>
 		<Item Name="Spécifications de construction" Type="Build">
 			<Item Name="FROG" Type="EXE">
