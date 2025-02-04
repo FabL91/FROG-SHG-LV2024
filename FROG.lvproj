@@ -34,6 +34,7 @@
 		</Item>
 		<Item Name="Newport platine" Type="Folder">
 			<Item Name="Test Platine newport.vi" Type="VI" URL="../SMC 100 driver Newport vi/Test Platine newport.vi"/>
+			<Item Name="Platine Prog.vi" Type="VI" URL="../SMC 100 driver Newport vi/Platine Prog.vi"/>
 		</Item>
 		<Item Name="Package Dependencies" Type="IIO Ladder Diagram">
 			<Property Name="NI.SortType" Type="Int">0</Property>
@@ -53,6 +54,7 @@
 		<Item Name="test Image.vi" Type="VI" URL="../test Image.vi"/>
 		<Item Name="test boucle For.vi" Type="VI" URL="../test boucle For.vi"/>
 		<Item Name="Test Autoco.vi" Type="VI" URL="../Test Autoco.vi"/>
+		<Item Name="Test_Spectro_HR2000+.vi" Type="VI" URL="../Test_Spectro_HR2000+.vi"/>
 		<Item Name="Dépendances" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="LV-TOML.lvlib" Type="Library" URL="/&lt;userlib&gt;/LV-TOML/lib/LV-TOML.lvlib"/>
@@ -231,21 +233,11 @@
 				<Item Name="Write To Spreadsheet File (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write To Spreadsheet File (string).vi"/>
 				<Item Name="LVOffsetAndMultiplierTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVOffsetAndMultiplierTypeDef.ctl"/>
 				<Item Name="LVRangeTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRangeTypeDef.ctl"/>
-				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
-				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
-				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
-				<Item Name="subTimeDelay.vi" Type="VI" URL="/&lt;vilib&gt;/express/express execution control/TimeDelayBlock.llb/subTimeDelay.vi"/>
-			</Item>
-			<Item Name="common32.dll" Type="Document" URL="common32.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="OmniDriver32.dll" Type="Document" URL="OmniDriver32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Wrapper_getMaximumIntegrationTime.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_getMaximumIntegrationTime.vi"/>
-			<Item Name="Wrapper_getMinimumIntegrationTime.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_getMinimumIntegrationTime.vi"/>
 			<Item Name="Wrapper_getWavelengths.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_getWavelengths.vi"/>
-			<Item Name="Wrapper_Create.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_Create.vi"/>
 			<Item Name="Wrapper_openAllSpectrometers.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_openAllSpectrometers.vi"/>
 			<Item Name="Wrapper_setIntegrationTime.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_setIntegrationTime.vi"/>
 			<Item Name="Wrapper_getSpectrum.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_getSpectrum.vi"/>
@@ -258,6 +250,15 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="LWSMC100_Close.vi" Type="VI" URL="../../../../../Newport/Motion Control/SMC100/LabView/Source code/LWSMC100_Close.vi"/>
+			<Item Name="LWSMC100_WaitEndOfHoming.vi" Type="VI" URL="../../../../../Newport/Motion Control/SMC100/LabView/Source code/LWSMC100_WaitEndOfHoming.vi"/>
+			<Item Name="LWSMC100_IsNotReferenced.vi" Type="VI" URL="../../../../../Newport/Motion Control/SMC100/LabView/Source code/LWSMC100_IsNotReferenced.vi"/>
+			<Item Name="LWSMC100_HomeSearch.vi" Type="VI" URL="../../../../../Newport/Motion Control/SMC100/LabView/Source code/LWSMC100_HomeSearch.vi"/>
+			<Item Name="Wrapper_Create.vi" Type="VI" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/labview/win32/Version8.5/Wrapper.llb/Wrapper_Create.vi"/>
+			<Item Name="common32.dll" Type="Document" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/OOI_HOME/common32.dll"/>
+			<Item Name="OmniDriver32.dll" Type="Document" URL="../../../../../Program Files (x86)/Ocean Optics/OmniDriver/OOI_HOME/OmniDriver32.dll"/>
+			<Item Name="common32.dll" Type="Document" URL="common32.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Spécifications de construction" Type="Build">
 			<Item Name="FROG" Type="EXE">
