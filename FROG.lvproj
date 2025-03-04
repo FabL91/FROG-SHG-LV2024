@@ -33,6 +33,7 @@
 			<Item Name="Rampe Par échantillon.PNG" Type="Document" URL="../Documents/Rampe Par échantillon.PNG"/>
 		</Item>
 		<Item Name="Newport platine" Type="Folder">
+			<Item Name="SMC100.lvlib" Type="Library" URL="../SMC 100 driver Newport vi/SMC100.lvlib"/>
 			<Item Name="Test Platine newport.vi" Type="VI" URL="../SMC 100 driver Newport vi/Test Platine newport.vi"/>
 			<Item Name="Platine Prog.vi" Type="VI" URL="../SMC 100 driver Newport vi/Platine Prog.vi"/>
 		</Item>
