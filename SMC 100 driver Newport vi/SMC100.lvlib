@@ -11,5 +11,6 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">604012544</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Get Current Position TP.vi" Type="VI" URL="../Get Current Position TP.vi"/>
 	<Item Name="Get Positionner error _ controller state_TS.vi" Type="VI" URL="../Get Positionner error _ controller state_TS.vi"/>
 </Library>
