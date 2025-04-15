@@ -52,6 +52,7 @@
 		<Item Name="UI SmarAct.lvclass" Type="LVClass" URL="../Workers/UI SmarAct/UI SmarAct.lvclass"/>
 		<Item Name="Spectro Acquisition.lvclass" Type="LVClass" URL="../Workers/Spectro Acquisition/Spectro Acquisition.lvclass"/>
 		<Item Name="File manipulate.lvclass" Type="LVClass" URL="../Workers/File manipulate/File manipulate.lvclass"/>
+		<Item Name="Status Platine Newport.lvclass" Type="LVClass" URL="../Workers/Status Platine Newport/Status Platine Newport.lvclass"/>
 		<Item Name="test Image.vi" Type="VI" URL="../test Image.vi"/>
 		<Item Name="test boucle For.vi" Type="VI" URL="../test boucle For.vi"/>
 		<Item Name="Test Autoco.vi" Type="VI" URL="../Test Autoco.vi"/>
