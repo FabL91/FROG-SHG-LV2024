@@ -1,0 +1,283 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (safepoint.cpp:691), pid=17880, tid=16980
+#  fatal error: Deadlock in safepoint code.  Should have called back to the VM before blocking.
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_31-b13) (build 1.8.0_31-b13)
+# Java VM: Java HotSpot(TM) Client VM (25.31-b07 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x2715e400):  JavaThread "Thread-0" [_thread_in_native_trans, id=16980, stack(0x04270000,0x04370000)]
+
+Stack: [0x04270000,0x04370000],  sp=0x0436ec18,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x524b7b8b
+C  0x524b09e6
+C  0x52476f85
+C  0x5248783a
+C  0x52321831
+C  0x523f3d8d
+C  0x5322b49f
+C  [LabVIEW.exe+0x1787f3]
+C  0x291eb283
+C  [LabVIEW.exe+0x208c121]
+C  [LabVIEW.exe+0x1a0bcb]
+C  [LabVIEW.exe+0x1ffd3fe]
+C  [LabVIEW.exe+0x2042fc3]
+C  [LabVIEW.exe+0x1ffd301]
+C  [LabVIEW.exe+0x19fe52]
+C  [LabVIEW.exe+0x19fd23]
+C  [LabVIEW.exe+0x1a031e]
+C  [LabVIEW.exe+0x20a442e]
+C  [LabVIEW.exe+0x1a0303]
+C  [KERNEL32.DLL+0x1fcc9]
+C  [ntdll.dll+0x682ae]
+C  [ntdll.dll+0x6827e]
+C  0x00000000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x2715e400 JavaThread "Thread-0" [_thread_in_native_trans, id=16980, stack(0x04270000,0x04370000)]
+  0x14a25c00 JavaThread "Service Thread" daemon [_thread_blocked, id=24224, stack(0x12b80000,0x12c80000)]
+  0x14a2cc00 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=4228, stack(0x122d0000,0x123d0000)]
+  0x14a2bc00 JavaThread "Attach Listener" daemon [_thread_blocked, id=10808, stack(0x12050000,0x12150000)]
+  0x14a2b000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=20892, stack(0x118d0000,0x119d0000)]
+  0x149f3800 JavaThread "Finalizer" daemon [_thread_blocked, id=21888, stack(0x0fff0000,0x100f0000)]
+  0x149f2800 JavaThread "Reference Handler" daemon [_thread_blocked, id=25384, stack(0x0da20000,0x0db20000)]
+
+Other Threads:
+  0x0d3cd400 VMThread [stack: 0x0d8a0000,0x0d9a0000] [id=24764]
+  0x14a27800 WatcherThread [stack: 0x13820000,0x13920000] [id=25236]
+
+VM state:synchronizing (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x2715c8e0] Threads_lock - owner thread: 0x0d3cd400
+
+Heap:
+ def new generation   total 4928K, used 1792K [0x3b400000, 0x3b950000, 0x3cea0000)
+  eden space 4416K,  40% used [0x3b400000, 0x3b5c0090, 0x3b850000)
+  from space 512K,   0% used [0x3b850000, 0x3b850000, 0x3b8d0000)
+  to   space 512K,   0% used [0x3b8d0000, 0x3b8d0000, 0x3b950000)
+ tenured generation   total 10944K, used 0K [0x3cea0000, 0x3d950000, 0x40400000)
+   the space 10944K,   0% used [0x3cea0000, 0x3cea0000, 0x3cea0200, 0x3d950000)
+ Metaspace       used 2026K, capacity 2434K, committed 2496K, reserved 4480K
+
+Card table byte_map: [0x0cba0000,0x0cbd0000] byte_map_base: 0x0c9c6000
+
+Polling page: 0x0b300000
+
+CodeCache: size=32768Kb used=714Kb max_used=714Kb free=32053Kb
+ bounds [0x39300000, 0x393b8000, 0x3b300000]
+ total_blobs=168 nmethods=33 adapters=68
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.140 Thread 0x14a2cc00   29             java.lang.String::startsWith (72 bytes)
+Event: 0.140 Thread 0x14a2cc00 nmethod 29 0x393b0908 code [0x393b0a10, 0x393b0b40]
+Event: 0.141 Thread 0x14a2cc00   30             sun.net.www.ParseUtil::encodePath (336 bytes)
+Event: 0.142 Thread 0x14a2cc00 nmethod 30 0x393b0c88 code [0x393b0e30, 0x393b14d8]
+Event: 0.142 Thread 0x14a2cc00   31             java.lang.String::length (6 bytes)
+Event: 0.142 Thread 0x14a2cc00 nmethod 31 0x393b1b48 code [0x393b1c40, 0x393b1cd0]
+Event: 0.146 Thread 0x14a2cc00   32             sun.misc.MetaIndex::mayContain (51 bytes)
+Event: 0.146 Thread 0x14a2cc00 nmethod 32 0x393b1d48 code [0x393b1e70, 0x393b1fe8]
+Event: 0.151 Thread 0x14a2cc00   33             java.util.Arrays::copyOfRange (63 bytes)
+Event: 0.151 Thread 0x14a2cc00 nmethod 33 0x393b21c8 code [0x393b2320, 0x393b26b8]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.149 Thread 0x2715e400 Exception <a 'java/security/PrivilegedActionException'> (0x3b577a50) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u31\2394\hotspot\src\share\vm\prims\jvm.cpp, line 1312]
+Event: 0.151 Thread 0x2715e400 Exception <a 'java/security/PrivilegedActionException'> (0x3b584cf0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u31\2394\hotspot\src\share\vm\prims\jvm.cpp, line 1312]
+Event: 0.151 Thread 0x2715e400 Exception <a 'java/security/PrivilegedActionException'> (0x3b586f18) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u31\2394\hotspot\src\share\vm\prims\jvm.cpp, line 1312]
+Event: 0.151 Thread 0x2715e400 Exception <a 'java/security/PrivilegedActionException'> (0x3b58a210) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u31\2394\hotspot\src\share\vm\prims\jvm.cpp, line 1312]
+Event: 0.152 Thread 0x2715e400 Exception <a 'java/security/PrivilegedActionException'> (0x3b58ea20) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u31\2394\hotspot\src\share\vm\prims\jvm.cpp, line 1312]
+Event: 0.152 Thread 0x2715e400 Exception <a 'java/security/PrivilegedActionException'> (0x3b591310) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u31\2394\hotspot\src\share\vm\prims\jvm.cpp, line 1312]
+Event: 0.154 Thread 0x2715e400 Exception <a 'java/io/IOException'> (0x3b594bc8) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u31\2394\hotspot\src\share\vm\prims\jni.cpp, line 716]
+Event: 0.154 Thread 0x2715e400 Exception <a 'java/io/IOException'> (0x3b594e58) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u31\2394\hotspot\src\share\vm\prims\jni.cpp, line 716]
+Event: 0.154 Thread 0x2715e400 Exception <a 'java/io/IOException'> (0x3b595050) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u31\2394\hotspot\src\share\vm\prims\jni.cpp, line 716]
+Event: 0.156 Thread 0x2715e400 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 0> (0x3b5aa138) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u31\2394\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 366]
+
+Events (10 events):
+Event: 0.154 loading class java/io/InterruptedIOException
+Event: 0.154 loading class java/io/InterruptedIOException done
+Event: 0.156 loading class java/util/ArrayList$Itr
+Event: 0.156 loading class java/util/ArrayList$Itr done
+Event: 0.156 Thread 0x2715e400 Thread exited: 0x2715e400
+Event: 0.156 Thread 0x2715e400 Thread added: 0x2715e400
+Event: 0.156 loading class java/lang/ArrayIndexOutOfBoundsException
+Event: 0.156 loading class java/lang/IndexOutOfBoundsException
+Event: 0.156 loading class java/lang/IndexOutOfBoundsException done
+Event: 0.156 loading class java/lang/ArrayIndexOutOfBoundsException done
+
+
+Dynamic libraries:
+0x00bc0000 - 0x03fe0000 	C:\Program Files (x86)\National Instruments\LabVIEW 2024\LabVIEW.exe
+0x77950000 - 0x77af4000 	C:\Windows\SYSTEM32\ntdll.dll
+0x759b0000 - 0x75aa0000 	C:\Windows\System32\KERNEL32.DLL
+0x76d30000 - 0x76f68000 	C:\Windows\System32\KERNELBASE.dll
+0x75710000 - 0x757a4000 	C:\ProgramData\Symantec\Symantec Endpoint Protection\14.3.10148.8000.105\Data\Sysfer\x86\sysfer.dll
+0x75840000 - 0x758bd000 	C:\Windows\System32\ADVAPI32.dll
+0x76f70000 - 0x7702f000 	C:\Windows\System32\msvcrt.dll
+0x769f0000 - 0x76a67000 	C:\Windows\System32\sechost.dll
+0x6d720000 - 0x6d728000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x77310000 - 0x773cc000 	C:\Windows\System32\RPCRT4.dll
+0x744e0000 - 0x74548000 	C:\Windows\SYSTEM32\nierInterface.dll
+0x76570000 - 0x765d3000 	C:\Windows\System32\WS2_32.dll
+0x765e0000 - 0x765f9000 	C:\Windows\System32\bcrypt.dll
+0x75aa0000 - 0x7607a000 	C:\Windows\System32\SHELL32.dll
+0x77030000 - 0x770ab000 	C:\Windows\System32\msvcp_win.dll
+0x771a0000 - 0x772c0000 	C:\Windows\System32\ucrtbase.dll
+0x76600000 - 0x7679c000 	C:\Windows\System32\USER32.dll
+0x767a0000 - 0x767b8000 	C:\Windows\System32\win32u.dll
+0x76820000 - 0x76843000 	C:\Windows\System32\GDI32.dll
+0x770b0000 - 0x77198000 	C:\Windows\System32\gdi32full.dll
+0x76a70000 - 0x76b06000 	C:\Windows\System32\OLEAUT32.dll
+0x76850000 - 0x76933000 	C:\Windows\System32\ole32.dll
+0x76080000 - 0x76301000 	C:\Windows\System32\combase.dll
+0x773d0000 - 0x7747f000 	C:\Windows\System32\COMDLG32.dll
+0x6d900000 - 0x6d928000 	C:\Windows\SYSTEM32\WINMM.dll
+0x76310000 - 0x76397000 	C:\Windows\System32\shcore.dll
+0x767c0000 - 0x76805000 	C:\Windows\System32\SHLWAPI.dll
+0x6d240000 - 0x6d450000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_a865f0c28672571c\COMCTL32.dll
+0x772c0000 - 0x772e5000 	C:\Windows\System32\IMM32.dll
+0x74c80000 - 0x74c88000 	C:\Windows\SYSTEM32\VERSION.dll
+0x6d620000 - 0x6d68d000 	C:\Windows\SYSTEM32\MSVCP140.dll
+0x66b30000 - 0x66bad000 	C:\Windows\SYSTEM32\WINSPOOL.DRV
+0x74550000 - 0x74565000 	C:\Windows\SYSTEM32\VCRUNTIME140.dll
+0x669c0000 - 0x66b28000 	C:\Windows\WinSxS\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.19041.5369_none_d9518ab7e1044dec\gdiplus.dll
+0x756d0000 - 0x75702000 	C:\Windows\SYSTEM32\IPHLPAPI.DLL
+0x5ac70000 - 0x5ad33000 	C:\Program Files (x86)\National Instruments\LabVIEW 2024\resource\mgcore_SH_24_1.dll
+0x5b440000 - 0x5b478000 	C:\Program Files (x86)\National Instruments\LabVIEW 2024\resource\niCPULib.dll
+0x59cd0000 - 0x59e36000 	C:\Program Files (x86)\National Instruments\LabVIEW 2024\resource\tdcore_24_1.dll
+0x59a20000 - 0x59ccc000 	C:\Program Files (x86)\National Instruments\LabVIEW 2024\resource\dfir_24_1.dll
+0x745a0000 - 0x74bb7000 	C:\Windows\SYSTEM32\windows.storage.dll
+0x74570000 - 0x74595000 	C:\Windows\SYSTEM32\Wldp.dll
+0x763a0000 - 0x763ff000 	C:\Windows\System32\bcryptPrimitives.dll
+0x74c70000 - 0x74c7f000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x6d880000 - 0x6d8f4000 	C:\Windows\system32\uxtheme.dll
+0x758c0000 - 0x75994000 	C:\Windows\System32\MSCTF.dll
+0x67b50000 - 0x67b58000 	C:\Windows\system32\IconCodecService.dll
+0x66700000 - 0x66871000 	C:\Windows\SYSTEM32\WindowsCodecs.dll
+0x778c0000 - 0x7793e000 	C:\Windows\System32\clbcatq.dll
+0x66520000 - 0x666f9000 	C:\Windows\system32\explorerframe.dll
+0x66000000 - 0x66515000 	C:\Windows\system32\d2d1.dll
+0x6d7a0000 - 0x6d7c1000 	C:\Windows\SYSTEM32\SspiCli.dll
+0x65f70000 - 0x65ff2000 	C:\Program Files (x86)\National Instruments\Shared\License Manager\NationalInstruments.LicenseManagement.Interop.dll
+0x6a310000 - 0x6a362000 	C:\Windows\SYSTEM32\mscoree.dll
+0x69f40000 - 0x69fcd000 	C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscoreei.dll
+0x6bb60000 - 0x6bb73000 	C:\Windows\SYSTEM32\CRYPTSP.dll
+0x6bb20000 - 0x6bb51000 	C:\Windows\system32\rsaenh.dll
+0x6bcc0000 - 0x6bcca000 	C:\Windows\SYSTEM32\CRYPTBASE.dll
+0x69330000 - 0x69b79000 	C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll
+0x69f20000 - 0x69f34000 	C:\Windows\SYSTEM32\VCRUNTIME140_CLR0400.dll
+0x69280000 - 0x6932b000 	C:\Windows\SYSTEM32\ucrtbase_clr0400.dll
+0x67b90000 - 0x68fe5000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\mscorlib\6de2204fc925c6b920b5f5ba462a832d\mscorlib.ni.dll
+0x5a760000 - 0x5a819000 	C:\Windows\SYSTEM32\textinputframework.dll
+0x59700000 - 0x5979b000 	C:\Windows\SYSTEM32\CoreMessaging.dll
+0x597a0000 - 0x59a1f000 	C:\Windows\SYSTEM32\CoreUIComponents.dll
+0x74bc0000 - 0x74be9000 	C:\Windows\SYSTEM32\ntmarta.dll
+0x5eca0000 - 0x5ed7d000 	C:\Windows\SYSTEM32\wintypes.dll
+0x5f7e0000 - 0x5f873000 	C:\Windows\SYSTEM32\mscms.dll
+0x6d840000 - 0x6d865000 	C:\Windows\SYSTEM32\USERENV.dll
+0x5f7d0000 - 0x5f7dc000 	C:\Windows\SYSTEM32\ColorAdapterClient.dll
+0x5f790000 - 0x5f7ce000 	C:\Windows\SYSTEM32\icm32.dll
+0x74e10000 - 0x74e16000 	C:\Windows\SYSTEM32\MSIMG32.dll
+0x65490000 - 0x6551a000 	C:\Windows\Microsoft.NET\Framework\v4.0.30319\clrjit.dll
+0x64960000 - 0x653bb000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\System\bb8e052b07ff9e320b8cf381b0aa4474\System.ni.dll
+0x641e0000 - 0x64955000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\System.Xml\71918b5f07a60de9fa4df954029d7038\System.Xml.ni.dll
+0x63f00000 - 0x641d4000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\System.Runteb92aa12#\b40d532739847b5c8dd82c761fea7642\System.Runtime.Serialization.ni.dll
+0x5ac40000 - 0x5ac60000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\SMDiagnostics\9e7bdc895491ae99e95a4d50d13e68f4\SMDiagnostics.ni.dll
+0x59630000 - 0x596fc000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\System.Servd1dec626#\a38fd46388985de4f3d236cf119a955b\System.ServiceModel.Internals.ni.dll
+0x636d0000 - 0x63ee7000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\System.Core\4da0d9e01f210adea76d9129ce9eac71\System.Core.ni.dll
+0x635c0000 - 0x636c6000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\System.Configuration\9f2ff70effbca0ca80ce7d7ccb4dd572\System.Configuration.ni.dll
+0x6d1a0000 - 0x6d1bc000 	C:\Windows\SYSTEM32\profapi.dll
+0x6d450000 - 0x6d4a3000 	C:\Windows\system32\mswsock.dll
+0x6bfb0000 - 0x6c040000 	C:\Windows\SYSTEM32\DNSAPI.dll
+0x76940000 - 0x76947000 	C:\Windows\System32\NSI.dll
+0x6bf90000 - 0x6bf99000 	C:\Program Files (x86)\National Instruments\Shared\mDNS Responder\nimdnsNSP.dll
+0x6c620000 - 0x6c62e000 	C:\Windows\SYSTEM32\nimdnsResponder.dll
+0x6bf60000 - 0x6bf68000 	C:\Windows\System32\rasadhlp.dll
+0x6bee0000 - 0x6bf38000 	C:\Windows\System32\fwpuclnt.dll
+0x63270000 - 0x634e2000 	C:\Program Files (x86)\National Instruments\Shared\License Manager\NationalInstruments.LicenseManagement.Core.dll
+0x76b10000 - 0x76c0f000 	C:\Windows\System32\CRYPT32.dll
+0x76c10000 - 0x76c68000 	C:\Windows\System32\WINTRUST.dll
+0x74c90000 - 0x74ca4000 	C:\Windows\SYSTEM32\NETAPI32.dll
+0x6bea0000 - 0x6beb6000 	C:\Windows\SYSTEM32\dhcpcsvc.DLL
+0x744d0000 - 0x744de000 	C:\Windows\System32\MSASN1.dll
+0x63160000 - 0x6326c000 	C:\Program Files (x86)\National Instruments\Shared\License Manager\NationalInstruments.LicenseManagement.Core.Background.dll
+0x0bc10000 - 0x0bc13000 	C:\Windows\SYSTEM32\icmp.Dll
+0x6c090000 - 0x6c0a1000 	C:\Windows\system32\napinsp.dll
+0x6c070000 - 0x6c086000 	C:\Windows\system32\pnrpnsp.dll
+0x6c060000 - 0x6c070000 	C:\Windows\system32\wshbth.dll
+0x6c040000 - 0x6c056000 	C:\Windows\system32\NLAapi.dll
+0x6bfa0000 - 0x6bfae000 	C:\Windows\System32\winrnr.dll
+0x6bec0000 - 0x6bed4000 	C:\Windows\SYSTEM32\dhcpcsvc6.DLL
+0x59500000 - 0x59630000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\System.Management\0707a744ad0b62b9e8d1f78e8069eb1a\System.Management.ni.dll
+0x63140000 - 0x6315d000 	C:\Windows\system32\wbem\wmiutils.dll
+0x630d0000 - 0x63140000 	C:\Windows\SYSTEM32\wbemcomn.dll
+0x63090000 - 0x630b1000 	C:\Windows\Microsoft.NET\Framework\v4.0.30319\wminet_utils.dll
+0x63080000 - 0x63090000 	C:\Windows\system32\wbem\wbemsvc.dll
+0x62fb0000 - 0x6307a000 	C:\Windows\system32\wbem\fastprox.dll
+0x62f90000 - 0x62fa8000 	C:\Windows\SYSTEM32\amsi.dll
+0x62ee0000 - 0x62f90000 	C:\Program Files\Symantec\Symantec Endpoint Protection\14.3.10148.8000.105\bin\symamsi.dll
+0x668e0000 - 0x66945000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\System.Xml.Linq\e7cd5cb179da42e1ec3b577ce07b276f\System.Xml.Linq.ni.dll
+0x59350000 - 0x594f3000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\System.Drawing\560034baf664f7147571a4a5dbbbea7d\System.Drawing.ni.dll
+0x669a0000 - 0x669b2000 	C:\Program Files (x86)\National Instruments\Shared\License Manager\Bin\nilm_Multisim_140300.dll
+0x62e20000 - 0x62e8b000 	C:\Program Files (x86)\National Instruments\Shared\License Manager\Bin\nilm_NIOPCServers_160000.dll
+0x66980000 - 0x66996000 	C:\Program Files (x86)\National Instruments\Shared\License Manager\Bin\nilm_Ultiboard_140300.dll
+0x759a0000 - 0x759a6000 	C:\Windows\System32\psapi.dll
+0x5ac30000 - 0x5ac3d000 	C:\Program Files (x86)\National Instruments\Shared\License Manager\Slcp\Win32\nislcplib.dll
+0x58ef0000 - 0x59346000 	C:\Program Files (x86)\National Instruments\Shared\SLCP\nislcpcore.dll
+0x6d010000 - 0x6d198000 	C:\Windows\SYSTEM32\dbghelp.dll
+0x58eb0000 - 0x58eee000 	C:\Windows\SYSTEM32\CONCRT140.dll
+0x580d0000 - 0x58ea2000 	C:\Windows\assembly\NativeImages_v4.0.30319_32\System.Web\1ebf628c12fe129bd136faf58166175f\System.Web.ni.dll
+0x58040000 - 0x580cd000 	C:\Windows\Microsoft.NET\Framework\v4.0.30319\webengine4.dll
+0x5e840000 - 0x5e9ed000 	C:\Windows\SYSTEM32\urlmon.dll
+0x6d790000 - 0x6d79b000 	C:\Windows\SYSTEM32\netutils.dll
+0x5e600000 - 0x5e838000 	C:\Windows\SYSTEM32\iertutil.dll
+0x6bf70000 - 0x6bf8d000 	C:\Windows\SYSTEM32\srvcli.dll
+0x5ee20000 - 0x5eee2000 	C:\Windows\SYSTEM32\PROPSYS.dll
+0x60560000 - 0x6056f000 	C:\Windows\SYSTEM32\virtdisk.dll
+0x5ec70000 - 0x5ec78000 	C:\Windows\SYSTEM32\FLTLIB.DLL
+
+VM Arguments:
+jvm_args: -Djava.library.path=C:\Program Files (x86)\Ocean Optics\OmniDriver\OOI_HOME -Xmx80m 
+java_command: <unknown>
+java_class_path (initial): C:\Program Files (x86)\Ocean Optics\OmniDriver\OOI_HOME/OmniDriver.jar;C:\Program Files (x86)\Ocean Optics\OmniDriver\OOI_HOME/SPAM.jar
+Launcher Type: generic
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Ocean Optics\OmniDriver\OOI_HOME;C:\Program Files\National Instruments\Shared\OpenVINO\;C:\Ruby30-x64\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Program Files (x86)\HP\IdrsOCR_15.4.1132.0\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files (x86)\IVI Foundation\IVI\Bin\;C:\Program Files\IVI Foundation\IVI\Bin\;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\National Instruments\Shared\LabVIEW CLI;C:\Program Files\PuTTY\;C:\Users\flepetit\AppData\Local\miniforge3\Scripts;C:\Users\flepetit\.local\bin;C:\Users\flepetit\.cargo\bin;;C:\Program Files\Ocean Optics\OceanDirect SDK\lib;C:\Program Files\Ocean Optics\OceanDirect SDK;C:\Users\flepetit\.cargo\bin;C:\Users\flepetit\.local\bin;C:\Users\flepetit\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Users\flepetit\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\flepetit\AppData\Local\Programs\Ollama;C:\Program Files (x86)\National Instruments\LabVIEW 2024\resource;C:\Program Files (x86)\Ocean Optics\OmniDriver\OOI_HOME\..\_jvm\bin;C:\Program Files (x86)\Ocean Optics\OmniDriver\OOI_HOME\..\_jvm\bin\client;C:\Program Files (x86)\Ocean Optics\OmniDriver\OOI_HOME\..\_jvm\bin\server
+USERNAME=flepetit
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 166 Stepping 0, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 10.0 , 64 bit Build 19045 
+
+CPU:total 12 (6 cores per cpu, 2 threads per core) family 6 model 166 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 33145328k(24559004k free), swap 38126064k(29915652k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.31-b07) for windows-x86 JRE (1.8.0_31-b13), built on Dec 17 2014 20:46:12 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Thu Apr 17 12:00:05 2025
+elapsed time: 3 seconds (0d 0h 0m 3s)
+

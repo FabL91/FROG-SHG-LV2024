@@ -57,6 +57,7 @@
 		<Item Name="test boucle For.vi" Type="VI" URL="../test boucle For.vi"/>
 		<Item Name="Test Autoco.vi" Type="VI" URL="../Test Autoco.vi"/>
 		<Item Name="Test_Spectro_HR2000+.vi" Type="VI" URL="../Test_Spectro_HR2000+.vi"/>
+		<Item Name="Variable globale Ctrl State SMC100.vi" Type="VI" URL="../Workers/Status Platine Newport/Variable globale Ctrl State SMC100.vi"/>
 		<Item Name="Dépendances" Type="Dependencies">
 			<Item Name="user.lib" Type="Folder">
 				<Item Name="LV-TOML.lvlib" Type="Library" URL="/&lt;userlib&gt;/LV-TOML/lib/LV-TOML.lvlib"/>
